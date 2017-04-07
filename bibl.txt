@@ -1,0 +1,4 @@
+
+LSTM: https://www.researchgate.net/profile/Sepp_Hochreiter/publication/13853244_Long_Short-term_Memory/links/5700e75608aea6b7746a0624/
+Long-Short-term-Memory.pdf
+
