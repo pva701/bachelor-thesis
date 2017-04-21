@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[russian]{babel}
+\usepackage{listings}
+\usepackage[fleqn]{mathtools}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage[a4paper, total={7in, 10in}]{geometry}
+\newcommand{\forceindent}{\leavevmode{\parindent=1em\indent}}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ 
+\begin{document}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{7}{| c |}{ \textbf{Sentiment classification} } \\ \hline
+\multirow{2}{*}{Датасет} & \multirow{2}{*}{Макс} & \multicolumn{5}{c|}{Архитектуры} \\ \cline{3-7} 
+      &        & CNN-RS  & LSTM-RS & CNN-LS & CNN-LL1 & CNN-LL2 \\ \hline
+SST-1 &  51.0  &  47.0   &  46.6  & 47.9    & 50.1    & 51.9    \\ \hline
+SST-2 &  88.1  &  86.0   &  85.4  & 87.0    & 87.1    & 87.8    \\ \hline
+MR    &  76.1  &  77.0   &  76.7  & 79.4    & 79.2    & 80.3    \\ \hline
+\end{tabular}
+ 
+\vspace{5mm}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{7}{| c |}{ \textbf{Сравнение с алгоритмами} } \\ \hline
+Датасет & C-LSTM & Par Vec & RNTN & Tree-LSTM      & DCNN & Модель \\ \hline
+SST-1   & 49.2  &  48.7   & 45.0 &  51.0          & 48.5 & \textbf{51.9} \\ \hline
+SST-2   & 87.8  &  87.8   & 85.4 & \textbf{88.0}  & 86.8 & 87.8          \\ \hline 
+\end{tabular}
+
+\end{document}
