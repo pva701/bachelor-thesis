@@ -24,8 +24,8 @@
 \hline
 \multicolumn{7}{| c |}{ \textbf{Sentiment classification} } \\ \hline
 \multirow{2}{*}{Датасет} & \multirow{2}{*}{Макс} & \multicolumn{5}{c|}{Архитектуры} \\ \cline{3-7} 
-      &        & CNN-RS  & LSTM-RS & CNN-LS & CNN-LL1 & CNN-LL2 \\ \hline
-SST-1 &  51.0  &  47.0   &  46.6  & 47.9    & 50.1    & 51.9    \\ \hline
+      &        & CNN-RS  & LSTM-RS & CNN-LS & CNN-LL2 & SYM-TOP6 \\ \hline
+SST-1 &  51.0  &  47.0   &  46.6  & 47.9    & 51.1    & 51.9    \\ \hline
 SST-2 &  88.1  &  86.0   &  85.4  & 87.0    & 87.1    & 87.8    \\ \hline
 MR    &  76.1  &  77.0   &  76.7  & 79.4    & 79.2    & 80.3    \\ \hline
 \end{tabular}
@@ -39,5 +39,11 @@ MR    &  76.1  &  77.0   &  76.7  & 79.4    & 79.2    & 80.3    \\ \hline
 SST-1   & 49.2  &  48.7   & 45.0 &  51.0          & 48.5 & \textbf{51.9} \\ \hline
 SST-2   & 87.8  &  87.8   & 85.4 & \textbf{88.0}  & 86.8 & 87.8          \\ \hline 
 \end{tabular}
+
+$$\left\lVert \cdot \right\rVert^2 \to max$$
+
+$$TopK \left( \lVert  w_1 \rVert^2, \lVert w_2 \rVert^2, \dots, \lVert  w_{2n-1} \rVert^2 \right) = \{v_1, v_2, \dots, v_k\}$$
+$$f_v = F(f_{v_1}, f_{v_2}, \dots, f_{v_k})$$
+$$w_v = W(f_{v_1} \circ w_{v_1}, f_{v_2} \circ w_{v_2}, \dots, f_{v_k} \circ w_{v_k})$$
 
 \end{document}
