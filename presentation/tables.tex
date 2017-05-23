@@ -32,12 +32,29 @@ MR    &  76.1  &  77.0   &  76.7  & 79.4    & 79.2    & 80.3    \\ \hline
  
 \vspace{5mm}
 
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\multicolumn{7}{| c |}{ \textbf{Сравнение с алгоритмами} } \\ \hline
-Датасет & C-LSTM & Par Vec & RNTN & Tree-LSTM      & DCNN & Модель \\ \hline
-SST-1   & 49.2  &  48.7   & 45.0 &  51.0          & 48.5 & \textbf{51.9} \\ \hline
-SST-2   & 87.8  &  87.8   & 85.4 & \textbf{88.0}  & 86.8 & 87.8          \\ \hline 
+Модель    & SST-1               & Subj         & TREC  \\ \hline
+Модель 1  & 50.8(0.5)           & 94.2(0.3)    & 91.8(0.3) \\
+Модель 2  & \textbf{51.0}(0.2)  & 92.8(0.3)    & \textbf{94.0}(0.2)\\ \hline
+RNN[3]    & 49.2                & 93.7         & 90.2  \\
+Tree-LSTM[4]& 49.2              & 90.7         & 90.7  \\
+CNN[2]    & 48.0                & 93.4         & 93.6  \\
+Par-Vec[5]& 48.7                & 90.5         & 91.8  \\
+AdaSent[3]& 49.5                & \textbf{95.5}& 92.4 \\ \hline
+\end{tabular}
+
+\vspace{5mm}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Модель    & SST-1              & MR          & Subj         & TREC  \\ \hline
+Модель 1  & 50.8(0.5)          & 79.1(0.4)   & \textbf{94.2}(0.3)& 91.8(0.3) \\
+Модель 2  & 51.0(0.2)          & 78.2(0.4)   & 92.8(0.3)    & \textbf{93.8}(0.2)\\ \hline
+RNN       & -                  & 77.2        & 93.7         & 90.2  \\
+Tree-LSTM & \textbf{51.0}      & 77.5        &  -           &  -    \\
+CNN       & 48.0               &\textbf{81.5}& 93.4         & 93.6  \\
+Par-Vec   & 48.7               & 74.8        & 90.5         & 91.8  \\ \hline
 \end{tabular}
 
 $$\left\lVert \cdot \right\rVert^2 \to max$$
