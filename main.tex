@@ -1,4 +1,4 @@
-\documentclass[]{itmo-student-thesis}
+\documentclass[specification,annotation]{itmo-student-thesis}
 
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb}
@@ -26,7 +26,7 @@
 
 \startdate{01}{сентября}{2016}
 \finishdate{31}{мая}{2017}
-\defencedate{15}{июня}{2017}
+\thedefencedate{}
 
 \technicalspec{
     В рамках данной работы требуется разработать модель для построения векторного представления предложения
@@ -43,6 +43,11 @@
 }
 
 \plannedsources{
+ \begin{enumerate}
+    \item Yoon Kim, Convolutional Neural Networks for Sentence Classification
+    \item Richard Socher et al, Recursive Deep Models for Semantic Compositionality
+Over a Sentiment Treebank
+  \end{enumerate}
 }
 
 \addstage{Ознакомление с предментой областью}{01.02.2017}
@@ -63,8 +68,8 @@
 }
   
 \advancedtechnologyusage{
-    Были использованы язык программирования Python, интегрированная среда разработки PyCharm, 
-    фрэймворк для символьных вычислений Tensorflow,
+    Были использованы язык программирования Python, библиотеки numpy, scikit-learn и matplotlib,
+    интегрированная среда разработки PyCharm, фрэймворк для символьных вычислений Tensorflow,
     система контроля версий Git и система компьютерной верстки LaTeX.
 }
 
