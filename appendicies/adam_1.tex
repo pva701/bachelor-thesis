@@ -1,0 +1,51 @@
+% -*-coding: utf-8-*-
+
+\chapter{Accuracy. Оптимизатор Adam. lambda=0.0001}
+
+\begin{minipage}{\linewidth}
+\begin{center}
+\captionof{table}{\textbf{TreeLSTM c контекстами LSTM.}} \label{tab:title} 
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Набор}   &         \multicolumn{6}{c|}{Размер k-граммы} \\ \cline{2-7} 
+     данных              & \textbf{-} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{2-5} \\ \hline
+\textbf{SST-1}           &  46.0    & 48.0     &\textbf{48.2}&47.5 &  47.2    & 48.1           \\  \hline
+\textbf{MR}              &  75.5    & 77.0     & 76.6              & 76.8   & 76.6     & \textbf{77.0} \\ \hline
+\textbf{Subj}            &  87.9    & \textbf{90.0}     & 89.8    & 89.2   & 89.3 & 89.2 \\ \hline
+\textbf{TREC}            &  86.7    & \textbf{89.9} & 87.1& 88.5   &  88.9  & 89.0  \\ \hline
+\end{tabular}
+\vspace{5mm}
+\end{center}
+\end{minipage}
+
+\vspace{5mm}
+\begin{minipage}{\linewidth}
+\begin{center}
+\captionof{table}{\textbf{TreeLSTM c контекстами CNN.}} \label{tab:title} 
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Набор}   &                \multicolumn{6}{c|}{Размер k-граммы} \\ \cline{2-7} 
+     данных              & \textbf{-} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{2-5} \\ \hline
+\textbf{SST-1}           & 49.0       &  49.4    & 49.6    & 49.7     & 49.0     & \textbf{49.8}  \\ \hline
+\textbf{MR}              & 77.2       &  \textbf{79.0}     & 78.5     & 78.4     & 77.5     & 78.9 \\\hline
+\textbf{Subj}            & 90.7       &  90.3    & 91.3    &\textbf{91.4}& 91.0  &  91.2 \\\hline
+\textbf{TREC}            & 90.7       &  \textbf{92.5}     & 92.1     & 91.8     & 91.7     &  91.6 \\\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+\begin{center}
+\captionof{table}{\textbf{TopK пересчет поддеревьев.}} \label{tab:title} 
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Набор}   &  \multicolumn{4}{c|}{Значения K} \\ \cline{2-5} 
+     данных              &  \textbf{2}& \textbf{4}   & \textbf{6} & \textbf{8} \\ \hline
+\textbf{SST-1}           & 44.0       & 45.0 &   \textbf{45.1}     & 44.5     \\ \hline
+\textbf{MR}              & 71.2       & 74.2  &  \textbf{74.0}     & 74.5     \\ \hline
+\textbf{Subj}            & 83.0       & 85.9  &  86.0              & \textbf{86.7} \\ \hline
+\textbf{TREC}            & 84.6       & 86.8  &  \textbf{86.4}     & 86.0     \\ \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\vspace{5mm}
